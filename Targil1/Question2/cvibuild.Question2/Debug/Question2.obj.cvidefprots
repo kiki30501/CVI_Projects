@@ -1,0 +1,25 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char *argv[]);"
+SourceLocation="z:\Code Projects\CVI_Projects\Targil1\Question2\Question2.c:9:1"
+
+[MyQuit]
+Class="Function"
+Prototype="int MyQuit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="z:\Code Projects\CVI_Projects\Targil1\Question2\Question2.c:21:1"
+
+[MyCopy]
+Class="Function"
+Prototype="int MyCopy(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="z:\Code Projects\CVI_Projects\Targil1\Question2\Question2.c:33:1"
+
+[MyUp]
+Class="Function"
+Prototype="int MyUp(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="z:\Code Projects\CVI_Projects\Targil1\Question2\Question2.c:46:1"
+
+[MyLow]
+Class="Function"
+Prototype="int MyLow(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="z:\Code Projects\CVI_Projects\Targil1\Question2\Question2.c:61:1"
+

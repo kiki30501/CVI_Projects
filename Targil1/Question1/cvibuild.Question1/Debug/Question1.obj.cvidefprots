@@ -1,0 +1,15 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char *argv[]);"
+SourceLocation="z:\Code Projects\CVI_Projects\Question1\Question1.c:7:1"
+
+[MyQuit]
+Class="Function"
+Prototype="int MyQuit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="z:\Code Projects\CVI_Projects\Question1\Question1.c:19:1"
+
+[MyTextPrint]
+Class="Function"
+Prototype="int MyTextPrint(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="z:\Code Projects\CVI_Projects\Question1\Question1.c:31:1"
+
