@@ -1,0 +1,20 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char *argv[]);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil1\Question4\Question4.c:12:5"
+
+[MyQuit]
+Class="Function"
+Prototype="int MyQuit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil1\Question4\Question4.c:24:17"
+
+[MyActionButtons]
+Class="Function"
+Prototype="int MyActionButtons(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil1\Question4\Question4.c:36:17"
+
+[MyNumButtons]
+Class="Function"
+Prototype="int MyNumButtons(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil1\Question4\Question4.c:95:17"
+
