@@ -12,7 +12,7 @@ VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
 Project 0001 = "Question1.prj"
-Drag Bar Left = 160
+Drag Bar Left = 234
 Window Top = 64
 Window Left = 310
 Window Bottom = 566
@@ -30,9 +30,9 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 2
+Number of Opened Files = 3
 Window Confinement Region Enabled = True
-MainColumnWidth = 143
+MainColumnWidth = 217
 FileDateColumnWidth = 70
 FileSizeColumnWidth = 70
 
@@ -48,7 +48,7 @@ Batch Build Debug = False
 [File 0001]
 Path = "/c/Users/sixsi/Code Projects/CVI_Projects/Targil1/Question1/Question1.uir"
 File Type = "User Interface Resource"
-Disk Date = 3798002497
+Disk Date = 3799321834
 In Projects = "1,"
 Window Top = 40
 Window Left = 11
@@ -64,7 +64,7 @@ In Projects = "1,"
 Source Window State = "1,33,33,33,24,24,24,0,0,0,0,0,0,0,0,0,0,0,33,24,401,672,1,0,"
 Window Top = 116
 Window Left = 51
-Window Z-Order = 1
+Window Z-Order = 3
 
 [Tab Order]
 Tab 0001 = "/c/Users/sixsi/Code Projects/CVI_Projects/Targil1/Question1/Question1.uir"

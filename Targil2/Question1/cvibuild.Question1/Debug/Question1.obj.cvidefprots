@@ -1,25 +1,35 @@
 [main]
 Class="Function"
 Prototype="int main(int argc, char *argv[]);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:11:5"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:12:5"
 
 [QuitCallback]
 Class="Function"
 Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:24:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:27:17"
 
 [RunCalculation]
 Class="Function"
 Prototype="int RunCalculation(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:36:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:39:17"
 
 [StartSim]
 Class="Function"
 Prototype="int StartSim(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:59:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:66:17"
 
 [ResetSim]
 Class="Function"
 Prototype="int ResetSim(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:83:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:90:17"
+
+[open_panel_graph]
+Class="Function"
+Prototype="void open_panel_graph(int menuBar, int menuItem, void *callbackData, int panel);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:106:18"
+
+[close_graph]
+Class="Function"
+Prototype="int close_graph(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:112:17"
 

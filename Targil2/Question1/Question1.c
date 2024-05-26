@@ -3,9 +3,10 @@
 #include <userint.h>
 #include "Question1.h"
 
-static int panelHandle, arrayHandle;
-double v1, v2, i, dt, Q, c1, c2, r;
-double  *values[] = {&v1, &v2, &dt, &c1, &c2, &r};
+static int panelHandle, arrayHandle, ph2;
+double v1, v2, i, dt, Q1, Q2, c1, c2, r, i_src1, i_src2;
+double  *values[] = {&v1, &v2, &dt, &c1, &c2, &r, &i_src1, &i_src2};
+double y_vals[1000];
 
 
 int main (int argc, char *argv[])
@@ -13,6 +14,8 @@ int main (int argc, char *argv[])
 	if (InitCVIRTE (0, argv, 0) == 0)
 		return -1;	/* out of memory */
 	if ((panelHandle = LoadPanel(0, "Question1.uir", PANEL)) < 0)
+		return -1;
+	if ((ph2 = LoadPanel(0, "Question1.uir", PANEL_2)) < 0)
 		return -1;
 	DisplayPanel (panelHandle);
 	arrayHandle = GetCtrlArrayFromResourceID (panelHandle, CTRLARRAY);
@@ -37,6 +40,7 @@ int CVICALLBACK RunCalculation (int panel, int control, int event,
 								void *callbackData, int eventData1, int eventData2)
 {
 	char s[12];
+	static int n = 0;
 	switch (event)
 	{
 		case EVENT_TIMER_TICK:
@@ -45,11 +49,14 @@ int CVICALLBACK RunCalculation (int panel, int control, int event,
 			i = (v1 - v2) / r;
 			sprintf(s, "%.3e", i);
 			SetCtrlVal (panelHandle, PANEL_STRING, s);
-			Q = i * dt;
-			v1 -= Q / c1;
-			v2 += Q / c2;
+			Q1 = (i - i_src1) * dt;
+			Q2 = (i + i_src2) * dt;
+			v1 -= Q1 / c1;
+			v2 += Q2 / c2;
 			SetCtrlVal(panelHandle, PANEL_V1, v1);
 			SetCtrlVal(panelHandle, PANEL_V2, v2);
+			y_vals[++n] = i;
+			PlotWaveform (ph2, PANEL_2_GRAPH, y_vals, n, VAL_DOUBLE, 1.0, 0.0, 0.0, dt, VAL_THIN_LINE, VAL_EMPTY_SQUARE, VAL_SOLID, 10, VAL_RED);
 			break;
 	}
 	return 0;
@@ -91,6 +98,25 @@ int CVICALLBACK ResetSim (int panel, int control, int event,
 			DefaultCtrl (panelHandle, PANEL_V1);
 			DefaultCtrl (panelHandle, PANEL_V2);
 			DefaultCtrl (panelHandle, PANEL_STRING);
+			break;
+	}
+	return 0;
+}
+
+void CVICALLBACK open_panel_graph (int menuBar, int menuItem, void *callbackData,
+								   int panel)
+{
+	DisplayPanel (ph2);
+}
+
+int CVICALLBACK close_graph (int panel, int control, int event,
+							 void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			HidePanel(ph2);
+
 			break;
 	}
 	return 0;
