@@ -48,7 +48,7 @@ Batch Build Debug = False
 [File 0001]
 Path = "/c/Users/sixsi/Code Projects/CVI_Projects/Targil2/Question1/Question1.uir"
 File Type = "User Interface Resource"
-Disk Date = 3799585810
+Disk Date = 3799756163
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
@@ -59,9 +59,9 @@ Window Z-Order = 2
 [File 0002]
 Path = "/c/Users/sixsi/Code Projects/CVI_Projects/Targil2/Question1/Question1.c"
 File Type = "CSource"
-Disk Date = 3799586143
+Disk Date = 3799756886
 In Projects = "1,"
-Source Window State = "1,52,52,52,35,35,35,0,0,0,0,0,0,0,0,0,36,0,52,35,401,602,1,0,"
+Source Window State = "1,209,209,209,12,12,12,0,0,0,0,0,0,0,0,0,169,0,209,12,401,602,1,0,"
 Window Top = 95
 Window Left = 42
 Window Z-Order = 1

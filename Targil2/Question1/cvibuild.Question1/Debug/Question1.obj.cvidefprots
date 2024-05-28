@@ -1,35 +1,55 @@
 [main]
 Class="Function"
 Prototype="int main(int argc, char *argv[]);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:12:5"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:17:5"
 
 [QuitCallback]
 Class="Function"
 Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:27:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:32:17"
 
 [RunCalculation]
 Class="Function"
 Prototype="int RunCalculation(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:39:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:44:17"
 
 [StartSim]
 Class="Function"
 Prototype="int StartSim(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:66:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:77:17"
 
 [ResetSim]
 Class="Function"
 Prototype="int ResetSim(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:90:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:103:17"
 
 [open_panel_graph]
 Class="Function"
 Prototype="void open_panel_graph(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:106:18"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:121:18"
 
 [close_graph]
 Class="Function"
 Prototype="int close_graph(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:112:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:127:17"
+
+[PlotNow]
+Class="Function"
+Prototype="int PlotNow(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:141:17"
+
+[LinLogXAxis]
+Class="Function"
+Prototype="int LinLogXAxis(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:172:17"
+
+[MyCursors]
+Class="Function"
+Prototype="int MyCursors(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:186:17"
+
+[FileSave]
+Class="Function"
+Prototype="int FileSave(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:204:17"
 

@@ -31,8 +31,21 @@
 #define  PANEL_STRING                     16      /* control type: string, callback function: (none) */
 
 #define  PANEL_2                          2
-#define  PANEL_2_GRAPH                    2       /* control type: graph, callback function: (none) */
+#define  PANEL_2_GRAPH                    2       /* control type: graph, callback function: MyCursors */
 #define  PANEL_2_close_graph_panel        3       /* control type: command, callback function: close_graph */
+#define  PANEL_2_PLOTI_RES                4       /* control type: command, callback function: PlotNow */
+#define  PANEL_2_PLOTVDIFF                5       /* control type: command, callback function: PlotNow */
+#define  PANEL_2_PLOTV2                   6       /* control type: command, callback function: PlotNow */
+#define  PANEL_2_PLOTV1                   7       /* control type: command, callback function: PlotNow */
+#define  PANEL_2_LINLOGSWITCH             8       /* control type: binary, callback function: LinLogXAxis */
+#define  PANEL_2_Cursor2_Y                9       /* control type: numeric, callback function: (none) */
+#define  PANEL_2_Cursor1_Y                10      /* control type: numeric, callback function: (none) */
+#define  PANEL_2_Cursor2_X                11      /* control type: numeric, callback function: (none) */
+#define  PANEL_2_Cursor1_X                12      /* control type: numeric, callback function: (none) */
+#define  PANEL_2_PlotSlope                13      /* control type: numeric, callback function: (none) */
+#define  PANEL_2_TauDiff                  14      /* control type: numeric, callback function: (none) */
+#define  PANEL_2_CalcTau                  15      /* control type: numeric, callback function: (none) */
+#define  PANEL_2_Print2File               16      /* control type: command, callback function: FileSave */
 
 
      /* Control Arrays: */
@@ -49,7 +62,11 @@
      /* Callback Prototypes: */
 
 int  CVICALLBACK close_graph(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK FileSave(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK LinLogXAxis(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK MyCursors(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 void CVICALLBACK open_panel_graph(int menubar, int menuItem, void *callbackData, int panel);
+int  CVICALLBACK PlotNow(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ResetSim(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK RunCalculation(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
