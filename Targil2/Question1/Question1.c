@@ -5,9 +5,9 @@
 #include <math.h>
 #include "Question1.h"
 
-#define plot_length 1000
+#define plot_length 2000
 
-static int panelHandle, arrayHandle, ph2, plot_I_res, plot_v1, plot_v2, plot_vdiff, dest_file;
+static int panelHandle, arrayHandle, ph2, plot_I_res, plot_v1, plot_v2, plot_vdiff;
 int n;
 double v1, v2, i, dt, Q1, Q2, c1, c2, r, i_src1, i_src2, tau1, tau2;
 double  *values[] = {&v1, &v2, &dt, &c1, &c2, &r, &i_src1, &i_src2};
@@ -145,24 +145,27 @@ int CVICALLBACK PlotNow (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			DeleteGraphPlot (ph2, PANEL_2_GRAPH, -1, VAL_NO_DRAW);
-			switch(control)
+			if(n)
 			{
-				case PANEL_2_PLOTI_RES:
-					plot_I_res = 	PlotWaveform (ph2, PANEL_2_GRAPH, I_res_vals, 	n, VAL_DOUBLE, 1.0, 0.0, 0.0, dt, VAL_THIN_LINE, VAL_EMPTY_SQUARE, VAL_SOLID, 10, VAL_RED);
-					break;
-				case PANEL_2_PLOTV1:
-					plot_v1 = 		PlotWaveform (ph2, PANEL_2_GRAPH, v1_vals, 		n, VAL_DOUBLE, 1.0, 0.0, 0.0, dt, VAL_THIN_LINE, VAL_EMPTY_SQUARE, VAL_SOLID, 10, VAL_GREEN);
-					break;
-				case PANEL_2_PLOTV2:
-					plot_v2 = 		PlotWaveform (ph2, PANEL_2_GRAPH, v2_vals, 		n, VAL_DOUBLE, 1.0, 0.0, 0.0, dt, VAL_THIN_LINE, VAL_EMPTY_SQUARE, VAL_SOLID, 10, VAL_BLUE);
-					break;
-				case PANEL_2_PLOTVDIFF:
-					plot_vdiff = 	PlotWaveform (ph2, PANEL_2_GRAPH, vdiff_vals, 	n, VAL_DOUBLE, 1.0, 0.0, 0.0, dt, VAL_THIN_LINE, VAL_EMPTY_SQUARE, VAL_SOLID, 10, VAL_YELLOW);
-					// Calculate Log plot slope based on vdiff (should result in the same value as "tau")
-					tau1 = -1 * (log(vdiff_vals[n-1]) - log(vdiff_vals[0])) / (n * dt);
-					SetCtrlVal (ph2, PANEL_2_PlotSlope, tau1);
-					SetCtrlVal (ph2, PANEL_2_TauDiff, (tau1-tau2));
-					break;
+				switch(control)
+				{
+					case PANEL_2_PLOTI_RES:
+						plot_I_res = 	PlotWaveform (ph2, PANEL_2_GRAPH, I_res_vals, 	n, VAL_DOUBLE, 1.0, 0.0, 0.0, dt, VAL_THIN_LINE, VAL_EMPTY_SQUARE, VAL_SOLID, 10, VAL_RED);
+						break;
+					case PANEL_2_PLOTV1:
+						plot_v1 = 		PlotWaveform (ph2, PANEL_2_GRAPH, v1_vals, 		n, VAL_DOUBLE, 1.0, 0.0, 0.0, dt, VAL_THIN_LINE, VAL_EMPTY_SQUARE, VAL_SOLID, 10, VAL_GREEN);
+						break;
+					case PANEL_2_PLOTV2:
+						plot_v2 = 		PlotWaveform (ph2, PANEL_2_GRAPH, v2_vals, 		n, VAL_DOUBLE, 1.0, 0.0, 0.0, dt, VAL_THIN_LINE, VAL_EMPTY_SQUARE, VAL_SOLID, 10, VAL_BLUE);
+						break;
+					case PANEL_2_PLOTVDIFF:
+						plot_vdiff = 	PlotWaveform (ph2, PANEL_2_GRAPH, vdiff_vals, 	n, VAL_DOUBLE, 1.0, 0.0, 0.0, dt, VAL_THIN_LINE, VAL_EMPTY_SQUARE, VAL_SOLID, 10, VAL_YELLOW);
+						// Calculate Log plot slope based on vdiff (should result in the same value as "tau")
+						tau1 = -1 * (log(vdiff_vals[n-1]) - log(vdiff_vals[0])) / (n * dt);
+						SetCtrlVal (ph2, PANEL_2_PlotSlope, tau1);
+						SetCtrlVal (ph2, PANEL_2_TauDiff, (tau1-tau2));
+						break;
+				}
 			}
 			break;
 	}
@@ -207,7 +210,13 @@ int CVICALLBACK FileSave (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			
+			FILE *fp;
+			fp = fopen ("Res_targil3.txt", "w");
+			for(int k = 0 ; k < n ; k++)
+			{
+				fprintf(fp, "%f,%.9f,%f,%f,%f\n", k*dt, I_res_vals[k], vdiff_vals[k], v1_vals[k], v2_vals[k]);
+			}
+			fclose(fp);
 			break;
 	}
 	return 0;

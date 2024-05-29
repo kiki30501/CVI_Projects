@@ -41,15 +41,15 @@ SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Ques
 [LinLogXAxis]
 Class="Function"
 Prototype="int LinLogXAxis(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:172:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:175:17"
 
 [MyCursors]
 Class="Function"
 Prototype="int MyCursors(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:186:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:189:17"
 
 [FileSave]
 Class="Function"
 Prototype="int FileSave(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:204:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil2\Question1\Question1.c:207:17"
 

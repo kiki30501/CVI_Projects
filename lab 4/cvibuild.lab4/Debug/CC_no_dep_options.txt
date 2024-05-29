@@ -1,0 +1,1 @@
+-force-include-file "lab4.c";"c:\cvi\lab 4\lab4.c" 
