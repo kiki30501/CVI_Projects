@@ -1,0 +1,15 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char *argv[]);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil4_Q5\Targil4_Q5.c:12:5"
+
+[QuitCallback]
+Class="Function"
+Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil4_Q5\Targil4_Q5.c:24:17"
+
+[FileOpen]
+Class="Function"
+Prototype="int FileOpen(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Targil4_Q5\Targil4_Q5.c:36:17"
+

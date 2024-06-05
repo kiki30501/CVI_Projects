@@ -1,0 +1,1 @@
+-force-include-file "Targil4_Q6.c";"c:\Users\sixsi\Code Projects\CVI_Projects\Targil4_Q6\Targil4_Q6.c" 

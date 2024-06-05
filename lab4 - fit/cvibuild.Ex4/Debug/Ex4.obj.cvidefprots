@@ -1,0 +1,25 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char *argv[]);"
+SourceLocation="c:\Users\boris.karasov\Downloads\Ex4\Part D\Ex4.c:18:1"
+
+[QuitCallback]
+Class="Function"
+Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\boris.karasov\Downloads\Ex4\Part D\Ex4.c:32:1"
+
+[clear_button]
+Class="Function"
+Prototype="int clear_button(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\boris.karasov\Downloads\Ex4\Part D\Ex4.c:45:1"
+
+[load_button]
+Class="Function"
+Prototype="int load_button(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\boris.karasov\Downloads\Ex4\Part D\Ex4.c:84:1"
+
+[fit_button]
+Class="Function"
+Prototype="int fit_button(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\boris.karasov\Downloads\Ex4\Part D\Ex4.c:146:1"
+
