@@ -1,0 +1,32 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[QuitCallback]
+Class="Function"
+Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[quit_graph_button]
+Class="Function"
+Prototype="int quit_graph_button(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[calc_theta_n]
+Class="Function"
+Prototype="void calc_theta_n();"
+
+[FFT_graphs]
+Class="Function"
+Prototype="int FFT_graphs(double *amplitude_value, int i, double *fft_arr, double *fft_img_arr, double *magnitude_arr, double *phase_arr, int color);"
+
+[timer]
+Class="Function"
+Prototype="int timer(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[start_func]
+Class="Function"
+Prototype="int start_func(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[graph_button]
+Class="Function"
+Prototype="int graph_button(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
