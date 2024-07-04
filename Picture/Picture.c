@@ -205,7 +205,7 @@ int CVICALLBACK MyCtrls (int panel, int control, int event,
 					for (k=0; k<pHeight; k++)
 						for (j=0; j<(pWidth/2); j++)
 						{
-							posCalcA  = k*pWidth;
+							posCalcA  = k*pWidth + j;
 							posCalcB  = (k+1)*pWidth - j - 1;
 							tempPixel = ((unsigned int *)TempPicData)[posCalcA];
 							((unsigned int *)TempPicData)[posCalcA] = ((unsigned int *)TempPicData)[posCalcB];
@@ -222,8 +222,8 @@ int CVICALLBACK MyCtrls (int panel, int control, int event,
 					for (k=0; k<(pHeight/2); k++)
 						for (j=0; j<pWidth; j++)
 						{
-							posCalcA  = k*pWidth;
-							posCalcB  = (pHeight-k-1)*pWidth+j;
+							posCalcA  = k*pWidth + j;
+							posCalcB  = (pHeight-k-1)*pWidth + j;
 							tempPixel = ((unsigned int *)TempPicData)[posCalcA];
 							((unsigned int *)TempPicData)[posCalcA] = ((unsigned int *)TempPicData)[posCalcB];
 							((unsigned int *)TempPicData)[posCalcB] = tempPixel;
@@ -238,23 +238,46 @@ int CVICALLBACK MyCtrls (int panel, int control, int event,
 					break;
 				
 				case PANEL_ROT90CW: // Rotate image 90 deg clockwise
-					TempRotPicData = TempPicData;
-					for (k=0; k<(pHeight); k++)
+					TempRotPicData = (unsigned char*) malloc(BitSize);
+					memcpy(TempRotPicData, TempPicData, BitSize);
+					for (k=0; k<pHeight; k++)
 						for (j=0; j<pWidth; j++)
 						{
-							posCalcA = k*pWidth+j;
-							posCalcB = pHeight*(j+1) - k - 1;
-							((unsigned int *)TempRotPicData)[posCalcB] = ((unsigned int *)TempPicData)[posCalcA];
+							posCalcA = k*pWidth + j;
+							posCalcB = j*pHeight + pHeight - k - 1;
+							((unsigned int *)TempPicData)[posCalcB] = ((unsigned int *)TempRotPicData)[posCalcA];
 						}
-					NewBitmap (ByteInRow*pHeight/pWidth, Pixel, pHeight, pWidth, NULL, TempRotPicData, NULL,
+					
+					NewBitmap ((ByteInRow*pHeight)/pWidth, Pixel, pHeight, pWidth, NULL, TempPicData, NULL,
 							   &bmpHandlerTemp);
 			
 					CanvasDrawBitmap (panelHandle, PANEL_CANVAS2, bmpHandlerTemp,
 							  				VAL_ENTIRE_OBJECT, VAL_ENTIRE_OBJECT);
+					free(TempRotPicData);
+					break;
+					
+				case PANEL_ROT90CCW: // Rotate image 90 deg counter-clockwise
+					TempRotPicData = (unsigned char*) malloc(BitSize);
+					memcpy(TempRotPicData, TempPicData, BitSize);
+					for (k=0; k<pHeight; k++)
+						for (j=0; j<pWidth; j++)
+						{
+							posCalcA = j*pHeight + pHeight - k - 1;
+							posCalcB = k*pWidth + j;
+							((unsigned int *)TempPicData)[posCalcB] = ((unsigned int *)TempRotPicData)[posCalcA];
+						}
+					
+					NewBitmap ((ByteInRow*pHeight)/pWidth, Pixel, pHeight, pWidth, NULL, TempPicData, NULL,
+							   &bmpHandlerTemp);
+			
+					CanvasDrawBitmap (panelHandle, PANEL_CANVAS2, bmpHandlerTemp,
+							  				VAL_ENTIRE_OBJECT, VAL_ENTIRE_OBJECT);
+					free(TempRotPicData);
 					break;
 			
-				case PANEL_ROTXDEG:	// Rotate image X  deg clockwise
-				
+				case PANEL_ROTXDEG:	// Rotate image by X degrees
+					// The rotation needs to be about the center of the image. which is at (x,y)=(pWidth/2,pHeight/2)
+					
 					break;
 			}
 			

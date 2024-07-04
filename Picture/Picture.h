@@ -20,12 +20,13 @@
 #define  PANEL_SAVE                       5       /* control type: command, callback function: SavePic */
 #define  PANEL_LOAD                       6       /* control type: command, callback function: LoadPic */
 #define  PANEL_ROTXDEG                    7       /* control type: command, callback function: MyCtrls */
-#define  PANEL_ROT90CW                    8       /* control type: command, callback function: MyCtrls */
-#define  PANEL_MIRY                       9       /* control type: command, callback function: MyCtrls */
-#define  PANEL_MIRX                       10      /* control type: command, callback function: MyCtrls */
-#define  PANEL_XOR                        11      /* control type: command, callback function: Xor */
-#define  PANEL_MODE                       12      /* control type: binary, callback function: (none) */
-#define  PANEL_DEGVAL                     13      /* control type: numeric, callback function: (none) */
+#define  PANEL_ROT90CCW                   8       /* control type: command, callback function: MyCtrls */
+#define  PANEL_ROT90CW                    9       /* control type: command, callback function: MyCtrls */
+#define  PANEL_MIRY                       10      /* control type: command, callback function: MyCtrls */
+#define  PANEL_MIRX                       11      /* control type: command, callback function: MyCtrls */
+#define  PANEL_XOR                        12      /* control type: command, callback function: Xor */
+#define  PANEL_MODE                       13      /* control type: binary, callback function: (none) */
+#define  PANEL_DEGVAL                     14      /* control type: numeric, callback function: (none) */
 
 
      /* Control Arrays: */
