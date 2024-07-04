@@ -59,9 +59,9 @@ Window Z-Order = 2
 [File 0002]
 Path = "/c/Users/sixsi/Code Projects/CVI_Projects/Picture/Picture.c"
 File Type = "CSource"
-Disk Date = 3802956599
+Disk Date = 3802963570
 In Projects = "1,"
-Source Window State = "1,279,279,279,20,20,20,0,0,0,0,0,0,0,0,0,256,0,279,20,401,630,1,0,"
+Source Window State = "1,37,37,37,4,4,4,0,0,0,0,0,0,0,0,0,22,0,37,4,401,630,1,0,"
 Window Top = 33
 Window Left = 10
 Window Z-Order = 1

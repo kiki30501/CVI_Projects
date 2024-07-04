@@ -3,6 +3,8 @@
 #include <userint.h>
 #include "Picture.h"
 
+#define pi 3.14159265358979323846
+
 static int panelHandle;
 static int bmpHandler, bmpHandlerTemp;
 int ColorSize, BitSize, MaskSize;
@@ -173,12 +175,12 @@ static int Mode;
 int CVICALLBACK SavePic (int panel, int control, int event,
 		void *callbackData, int eventData1, int eventData2)
 {
-char FileName[260];
+	char FileName[260];
 	switch (event)
 	{
 		case EVENT_COMMIT:
 			FileSelectPopup ("", "*.jpg", "", "", VAL_SAVE_BUTTON, 0, 0, 1, 1, FileName);
-			GetCtrlBitmap (panelHandle, PANEL_CANVAS2, NULL, &bmpHandlerTemp);
+			GetCtrlBitmap (panelHandle, PANEL_CANVAS2, 0, &bmpHandlerTemp);
 			SaveBitmapToJPEGFile (bmpHandlerTemp, FileName, JPEG_DCTFLOAT, 100);
 			DiscardBitmap (bmpHandlerTemp);
 			break;
@@ -193,6 +195,8 @@ int CVICALLBACK MyCtrls (int panel, int control, int event,
 	int tempPixel, posCalcA, posCalcB;
 	unsigned char *TempPicData, *TempRotPicData;
 	int j, k;
+	double angle, rotatedX, rotatedY, radians, centerX, centerY, relX, relY;
+	int OriginalX, OriginalY, OriginalPos, RotatedPos;
 	switch (event)
 	{
 		case EVENT_COMMIT:
@@ -275,13 +279,41 @@ int CVICALLBACK MyCtrls (int panel, int control, int event,
 					free(TempRotPicData);
 					break;
 			
-				case PANEL_ROTXDEG:	// Rotate image by X degrees
+				case PANEL_ROTXDEG:	// Rotate image by X degrees counter-clockwise
 					// The rotation needs to be about the center of the image. which is at (x,y)=(pWidth/2,pHeight/2)
-					
+					centerX = pWidth  / 2.0;
+					centerY = pHeight / 2.0;
+					GetCtrlVal(panelHandle, PANEL_DEGVAL, &angle);
+					radians = angle * (pi / 180.0);
+
+					TempRotPicData = (unsigned char*) malloc(BitSize);
+					memcpy(TempRotPicData, TempPicData, BitSize);
+
+					for (k=0; k<pHeight; k++) {
+						for (j=0; j<pWidth; j++) {
+							relX = j - centerX;
+							relY = k - centerY;
+							
+							rotatedX = relX * cos(radians) - relY * sin(radians);
+							rotatedY = relX * sin(radians) + relY * cos(radians);
+							
+							OriginalX = (int)(rotatedX + centerX);
+							OriginalY = (int)(rotatedY + centerY);
+
+							// Check if the original coordinates are within the image boundaries
+							if (OriginalX >= 0 && OriginalX < pWidth && OriginalY >= 0 && OriginalY < pHeight) {
+								// Copy the pixel from the original image to the rotated image
+								posCalcA = OriginalY * pWidth + OriginalX;
+								posCalcB = k * pWidth + j;
+								((unsigned int*)TempPicData)[posCalcB] = ((unsigned int*)TempRotPicData)[posCalcA];
+							}
+						}
+					}
+					NewBitmap(ByteInRow, Pixel, pWidth, pHeight, NULL, TempPicData, NULL, &bmpHandlerTemp);
+					CanvasDrawBitmap(panelHandle, PANEL_CANVAS2, bmpHandlerTemp, VAL_ENTIRE_OBJECT, VAL_ENTIRE_OBJECT);
+					free(TempRotPicData);
 					break;
 			}
-			
-			
 			
 			DiscardBitmap (bmpHandlerTemp);
 			break;

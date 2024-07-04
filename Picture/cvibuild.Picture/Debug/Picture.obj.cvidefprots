@@ -1,45 +1,45 @@
 [SatInt]
 Class="Function"
 Prototype="int SatInt(int Num, int Min, int Max);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:17:5"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:19:5"
 
 [main]
 Class="Function"
 Prototype="int main(int argc, char *argv[]);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:27:5"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:29:5"
 
 [QuitCallback]
 Class="Function"
 Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:42:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:44:17"
 
 [LoadPic]
 Class="Function"
 Prototype="int LoadPic(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:57:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:59:17"
 
 [Xor]
 Class="Function"
 Prototype="int Xor(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:82:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:84:17"
 
 [MakeZoomBmp]
 Class="Function"
 Prototype="int MakeZoomBmp();"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:108:5"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:110:5"
 
 [MoveRect]
 Class="Function"
 Prototype="int MoveRect(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:136:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:138:17"
 
 [SavePic]
 Class="Function"
 Prototype="int SavePic(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:173:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:175:17"
 
 [MyCtrls]
 Class="Function"
 Prototype="int MyCtrls(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:190:17"
+SourceLocation="c:\Users\sixsi\Code Projects\CVI_Projects\Picture\Picture.c:192:17"
 
