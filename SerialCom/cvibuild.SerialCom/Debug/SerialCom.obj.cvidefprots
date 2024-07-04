@@ -1,0 +1,36 @@
+[MyCallback]
+Class="Function"
+Prototype="void MyCallback(int portNumber, int eventMask, void *callbackData);"
+
+[MyPolling]
+Class="Function"
+Prototype="void MyPolling();"
+
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[QuitCallback]
+Class="Function"
+Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Config]
+Class="Function"
+Prototype="int Config(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SendString]
+Class="Function"
+Prototype="int SendString(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[RecTimer]
+Class="Function"
+Prototype="int RecTimer(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[RecMode]
+Class="Function"
+Prototype="int RecMode(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SendNumeric]
+Class="Function"
+Prototype="int SendNumeric(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
