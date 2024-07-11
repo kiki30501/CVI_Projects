@@ -11,6 +11,12 @@ int SendCom = 5;
 int RecvCom = 6;
 int Err;
 int LineNum = 0;
+int ColorSize, BitSize, MaskSize;
+int ByteInRow, Pixel, pWidth, pHeight;
+int ByteInRowRx, PixelRx, pWidthRx, pHeightRx, BitSizeRx;
+unsigned char *MyPicDataTx, *MyPicDataRx;
+int CanvasSizeX, CanvasSizeY;
+static int Top=0, Left=0, Width=128, Height=128;
 
 /*********************************************************************/
 void CVICALLBACK MyCallback (int portNumber, int eventMask, void *callbackData)
@@ -35,15 +41,71 @@ int N;
 	return;
 }
 /*********************************************************************/
+
+void CVICALLBACK RecvImageRx (int portNumber, int eventMask, void *callbackData)
+{
+	// Receive the data over the COM link and save the result to an image
+	// The data is received in the following order: ByteInRowRx, PixelRx,
+ 	// pWidthRx, pHeightRx, PicDataRx
+	int N;
+	static char RecBuff[100];
+	int RecvData[10];
+
+	/*if (RecBuff == "ByteInRow")
+	{
+		strcpy(RecBuff, RecBuff);
+		ComRdTerm (RecvCom, (char *)(&ByteInRowRx), 100, 0);
+	}
+	else if (RecBuff == "Pixel")
+	{
+		strcpy(RecBuff, RecBuff);
+		ComRdTerm (RecvCom, (char *)(&PixelRx), 100, 0);
+	}
+	else if (RecBuff == "pWidth")
+	{
+		strcpy(RecBuff, RecBuff);
+		ComRdTerm (RecvCom, (char *)(&pWidthRx), 100, 0);
+	}
+	else if (RecBuff == "pHeight")
+	{
+		strcpy(RecBuff, RecBuff);
+		ComRdTerm (RecvCom, (char *)(&pWidthRx), 100, 0);
+	}
+	else if (RecBuff == "BitSize")
+	{
+		strcpy(RecBuff, RecBuff);
+		ComRdTerm (RecvCom, (char *)(&BitSizeRx), 100, 0);
+	}
+	else if (RecBuff == "MyPicData")
+	{
+		strcpy(RecBuff, "");
+		MyPicDataRx = (unsigned char*) malloc(BitSizeRx);
+		ComRdTerm (RecvCom, (char *)(&MyPicDataRx), BitSize, 0);
+	}
+	else
+	{
+		N = ComRdTerm (RecvCom, RecBuff, 100, 0);
+		RecBuff[N] = 0;
+	}*/
+	
+	N = ComRdTerm (RecvCom, RecBuff, 100, 0);
+	SetCtrlVal (panelHandleRx, PANEL_Rx_LED, 1);
+	
+	
+	
+}
+
+/*********************************************************************/
+
 int main (int argc, char *argv[])
 {
 	if (InitCVIRTE (0, argv, 0) == 0)
 		return -1;	/* out of memory */
 	if ((panelHandle = LoadPanel (0, "SerialCom.uir", PANEL)) < 0)
 		return -1;
-	if ((panelHandleRx = LoadPanel (0, "SerialCom.uir", PANEL_2)) < 0)
+	if ((panelHandleRx = LoadPanel (0, "SerialCom.uir", PANEL_Rx)) < 0)
 		return -1;
-	if ((panelHandleTx = LoadPanel (0, "SerialCom.uir", PANEL_3)) < 0)
+	if ((panelHandleTx = LoadPanel (0, "SerialCom.uir", PANEL_Tx)) < 0)
 		return -1;
 	DisplayPanel (panelHandle);
 	RunUserInterface ();
@@ -69,15 +131,24 @@ int CVICALLBACK QuitCallback (int panel, int control, int event,
 int CVICALLBACK Config (int panel, int control, int event,
 		void *callbackData, int eventData1, int eventData2)
 {
+	int Parity;
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			Err = OpenComConfig (SendCom, "", 9600, 0, 7, 1, 512, 512);
-			Err = OpenComConfig (RecvCom, "", 9600, 0, 7, 1, 512, 512);
-			
+			GetCtrlVal (panelHandle, PANEL_COM_Rx, &RecvCom);
+			GetCtrlVal (panelHandle, PANEL_COM_Tx, &SendCom);
+			GetCtrlVal (panelHandle, PANEL_Parity_Toggle, &Parity);
+			Err = OpenComConfig (SendCom, "", 9600, Parity, 7, 1, 512, 512);
+			Err = OpenComConfig (RecvCom, "", 9600, Parity, 7, 1, 512, 512);
 			SetCtrlAttribute (panelHandle, PANEL_SENDSTRING, ATTR_DIMMED, 0);
 			SetCtrlAttribute (panelHandle, PANEL_Q4_numeric, ATTR_DIMMED, 0);
-			SetCtrlAttribute (panelHandle, PANEL_BINARYSWITCH, ATTR_DIMMED, 0);
+			SetCtrlAttribute (panelHandle, PANEL_MODE_SELECT, ATTR_DIMMED, 0);
+			SetCtrlAttribute (panelHandleRx, PANEL_Rx_Rx_SelectPic, ATTR_DIMMED, 0);
+			SetCtrlAttribute (panelHandleTx, PANEL_Tx_Tx_SelectPic, ATTR_DIMMED, 0);
+			SetCtrlAttribute (panelHandleTx, PANEL_Tx_SendButton, ATTR_DIMMED, 0);
+			SetCtrlAttribute (panelHandle, PANEL_Parity_Toggle, ATTR_DIMMED, 1);
+			SetCtrlAttribute (panelHandle, PANEL_COM_Rx, ATTR_DIMMED, 1);
+			SetCtrlAttribute (panelHandle, PANEL_COM_Tx, ATTR_DIMMED, 1);
 			SetCtrlAttribute (panelHandle, PANEL_TIMER, ATTR_ENABLED, 1);
 			break;
 	}
@@ -123,13 +194,23 @@ int CVICALLBACK RecMode (int panel, int control, int event,
 int Mode;
 	switch (event)
 	{
-		case EVENT_COMMIT:
-			GetCtrlVal (panelHandle, PANEL_BINARYSWITCH, &Mode);
-			SetCtrlAttribute (panelHandle, PANEL_TIMER, ATTR_ENABLED, !Mode);
-			if (Mode)
-				InstallComCallback (RecvCom, LWRS_RXFLAG, 0, 0, MyCallback, 0);
-			else
-				InstallComCallback (RecvCom, LWRS_RXFLAG, 0, 0, 0, 0); 
+		case EVENT_VAL_CHANGED:
+			GetCtrlVal (panelHandle, PANEL_MODE_SELECT, &Mode);
+			SetCtrlAttribute (panelHandle, PANEL_TIMER, ATTR_ENABLED, !Mode); // if in polling mode then enable the timer
+			switch (Mode)
+			{
+				case 0: //polling
+					InstallComCallback (RecvCom, LWRS_RXFLAG, 0, 0, 0, 0); 
+					break;
+				
+				case 1: //callback
+					InstallComCallback (RecvCom, LWRS_RXFLAG, 0, 0, MyCallback, 0);
+					break;
+				
+				case 2: //Image
+					InstallComCallback (RecvCom, LWRS_RXFLAG, 0, 0, RecvImageRx, 0);
+					break;
+			}
 			break;
 	}
 	return 0;
@@ -139,6 +220,8 @@ int Mode;
 int CVICALLBACK SendNumeric (int panel, int control, int event,
 							 void *callbackData, int eventData1, int eventData2)
 {
+	// This section is implemented with sprintf. The function for the image transmission
+	// we've made using the method of sending casted portions of the data.
 	double NumBuff;
 	char SendBuff[100];
 	int Len;
@@ -176,25 +259,74 @@ void CVICALLBACK TxPanel (int menuBar, int menuItem, void *callbackData,
 int CVICALLBACK RxSelectFile (int panel, int control, int event,
 							  void *callbackData, int eventData1, int eventData2)
 {
+	char FileName[260];
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			FileSelectPopup ("", "*.jpg", "", "", VAL_LOAD_BUTTON, 0, 0, 1, 1, FileName);
+			GetBitmapFromFile (FileName, &bmpHandlerRx);
+			CanvasDrawBitmap (panelHandleRx, PANEL_Rx_CANVAS, bmpHandlerRx, VAL_ENTIRE_OBJECT, VAL_ENTIRE_OBJECT);
 			break;
 	}
 	return 0;
 }
 
-/*********************************************************************/
+/*********************************************************************
 
-int CVICALLBACK SendFile (int panel, int control, int event,
+char **CreateBmpSendArray()
+{
+	char *arr[6] = 
+	return arr;
+}
+
+*********************************************************************/
+
+int CVICALLBACK SendBmp (int panel, int control, int event,
 						  void *callbackData, int eventData1, int eventData2)
 {
+	int Len;
+	int mydata[] = {11,24,546546,23,11312,9876,2112,56342,887,4598};
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
-			break;
+			// In the transmission the data we need to send is all the arguments
+			// needed in the the function NewBitmap which include both the details
+			// of the image and the image data (pixels).
+			// To send data types that aren't char*, it's possible to use the following cast: (char *)(&x)
+			
+			// Create the array of messages to send
+			/*char *SendArray[] = {
+				"ByteInRow",
+				(char *)(&ByteInRow),
+				"Pixel",
+				(char *)(&Pixel),
+				"pWidth",
+				(char *)(&pWidth),
+				"pHeight",
+				(char *)(&pHeight),
+				"BitSize",
+				(char *)(BitSize),
+				};
+			
+			for (int i=0; i<10; i+=2)
+			{
+				Len = strlen(SendArray[i]);
+				ComWrt (SendCom, SendArray[i], Len);
+				Delay(0.1);
+				Len = sizeof(int);
+				ComWrt (SendCom, SendArray[i+1], Len);
+				Delay(0.1);
+			}
+			Len = strlen("MyPicData");
+			ComWrt (SendCom, "MyPicData", Len);
+			Delay(0.1);
+			ComWrt (SendCom, (char *)(MyPicDataTx), BitSize);
+			break;*/
+			
+			ComWrt (SendCom, (char *)(mydata), sizeof(mydata));
+			Delay(0.1);
+			
+			
 	}
 	return 0;
 }
@@ -209,9 +341,10 @@ int CVICALLBACK TxSelectFile (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			FileSelectPopup ("", "*.jpg", "", "", VAL_LOAD_BUTTON, 0, 1, 1, 0, FileName);
-			GetBitmapFromFile (FileName, &bmpHandler);
-			
-
+			GetBitmapFromFile (FileName, &bmpHandlerTx);
+			GetBitmapInfo (bmpHandlerTx, &ColorSize, &BitSize, &MaskSize);
+			MyPicDataTx = (unsigned char*) malloc(BitSize);
+			GetBitmapData (bmpHandlerTx, &ByteInRow, &Pixel, &pWidth, &pHeight, NULL, MyPicDataTx, NULL);
 			break;
 	}
 	return 0;
@@ -225,7 +358,7 @@ int CVICALLBACK ClosePanelTx (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			HidePanel (PanelHandleTx);
+			HidePanel (panelHandleTx);
 			break;
 	}
 	return 0;
@@ -239,7 +372,7 @@ int CVICALLBACK ClosePanelRx (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			HidePanel (PanelHandleRx);
+			HidePanel (panelHandleRx);
 			break;
 	}
 	return 0;

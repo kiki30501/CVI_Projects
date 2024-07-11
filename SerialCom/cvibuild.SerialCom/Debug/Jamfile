@@ -1,43 +1,42 @@
 CCFLAGS = -g ;
-HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\word"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\excel"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl\\custsupp"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\cvirtsup"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\datasock"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\daqUtil"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\printing"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\toolbox"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\reportgen"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\localui"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\instr"
+HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\instr"
 	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
 	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
 	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
-	"C:\\ProgramData\\National Instruments\\CVI2017\\instr"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include"
 	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
-	"C:\\ProgramData\\National Instruments\\CVI2017\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\include"
 	"C:\\ProgramData\\National Instruments\\CVI\\include"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\include\\ansi"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\include\\clang\\3.3"
-	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\clang\\3.3"
+	"c:\\Program Files\\IVI Foundation\\IVI\\Include"
 	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
 	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
-	"c:\\Program Files (x86)\\National Instruments\\CVI2017\\bin"
-	"c:\\ProgramData\\National Instruments\\CVI2017\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2020\\bin"
 	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
 	;
 include Jamfile_instr ;
-LOCATE on "SerialCom.c" = "c:\\SerialCom" ;
-Object "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" : "c:\\SerialCom\\SerialCom.c" ;
-FILENUM on "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" = 1 ;
-DEFPROTS on "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" = "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj.cvidefprots" ;
-OUTFILE on "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" = "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj.out" ;
-PrjObjects += "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" ;
-Object "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\resources.res" : "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\resources.in.rc" ;
-Depends "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\resources.res" : "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\manifest.xml" ;
-MainFromObjects "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.exe" : $(PrjObjects) $(InstrObjects) ;
-Depends "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.exe" : "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\link_options.txt" ;
-Depends "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.exe" : "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\resources.res" ;
-Depends all : "c:\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.exe" ;
+LOCATE on "SerialCom.c" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom" ;
+Object "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\SerialCom.c" ;
+FILENUM on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" = 1 ;
+DEFPROTS on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj.out" ;
+PrjObjects += "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.obj" ;
+Object "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\resources.res" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\resources.in.rc" ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\resources.res" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\manifest.xml" ;
+MainFromObjects "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.exe" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\link_options.txt" ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.exe" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\resources.res" ;
+Depends all : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\SerialCom\\cvibuild.SerialCom\\Debug\\SerialCom.exe" ;
