@@ -42,57 +42,58 @@ int N;
 }
 /*********************************************************************/
 
-void CVICALLBACK RecvImageRx (int portNumber, int eventMask, void *callbackData)
+void RecvImageRx ()
 {
 	// Receive the data over the COM link and save the result to an image
 	// The data is received in the following order: ByteInRowRx, PixelRx,
  	// pWidthRx, pHeightRx, PicDataRx
 	int N;
-	static char RecBuff[100];
-	int RecvData[10];
+	static char LastBuff[100];
+	char RecBuff[100];
+	//int RecvData[10];
 
-	/*if (RecBuff == "ByteInRow")
+	if (!strcmp(LastBuff, "ByteInRow"))
 	{
-		strcpy(RecBuff, RecBuff);
-		ComRdTerm (RecvCom, (char *)(&ByteInRowRx), 100, 0);
+		N = ComRdTerm (RecvCom, RecBuff, 100, 0);
+		RecBuff[N] = 0;
+		strcpy((char *)(&ByteInRowRx), RecBuff);
+		strcpy(LastBuff, "0");
 	}
-	else if (RecBuff == "Pixel")
+	else if (!strcmp(LastBuff, "Pixel"))
 	{
-		strcpy(RecBuff, RecBuff);
 		ComRdTerm (RecvCom, (char *)(&PixelRx), 100, 0);
+		strcpy(LastBuff, "0");
 	}
-	else if (RecBuff == "pWidth")
+	else if (!strcmp(LastBuff, "pWidth"))
 	{
-		strcpy(RecBuff, RecBuff);
 		ComRdTerm (RecvCom, (char *)(&pWidthRx), 100, 0);
+		strcpy(LastBuff, "0");
 	}
-	else if (RecBuff == "pHeight")
+	else if (!strcmp(LastBuff, "pHeight"))
 	{
-		strcpy(RecBuff, RecBuff);
 		ComRdTerm (RecvCom, (char *)(&pWidthRx), 100, 0);
+		strcpy(LastBuff, "0");
 	}
-	else if (RecBuff == "BitSize")
+	else if (!strcmp(LastBuff, "BitSize"))
 	{
-		strcpy(RecBuff, RecBuff);
 		ComRdTerm (RecvCom, (char *)(&BitSizeRx), 100, 0);
+		strcpy(LastBuff, "0");
 	}
-	else if (RecBuff == "MyPicData")
+	else if (!strcmp(LastBuff, "MyPicData"))
 	{
-		strcpy(RecBuff, "");
 		MyPicDataRx = (unsigned char*) malloc(BitSizeRx);
 		ComRdTerm (RecvCom, (char *)(&MyPicDataRx), BitSize, 0);
+		SetCtrlVal (panelHandleRx, PANEL_Rx_LED, 1);
+		strcpy(LastBuff, "0");
 	}
 	else
 	{
 		N = ComRdTerm (RecvCom, RecBuff, 100, 0);
 		RecBuff[N] = 0;
-	}*/
+		strcpy (LastBuff, RecBuff);
+	}
 	
-	N = ComRdTerm (RecvCom, RecBuff, 100, 0);
-	SetCtrlVal (panelHandleRx, PANEL_Rx_LED, 1);
-	
-	
-	
+	return;	
 }
 
 /*********************************************************************/
@@ -138,8 +139,10 @@ int CVICALLBACK Config (int panel, int control, int event,
 			GetCtrlVal (panelHandle, PANEL_COM_Rx, &RecvCom);
 			GetCtrlVal (panelHandle, PANEL_COM_Tx, &SendCom);
 			GetCtrlVal (panelHandle, PANEL_Parity_Toggle, &Parity);
-			Err = OpenComConfig (SendCom, "", 9600, Parity, 7, 1, 512, 512);
-			Err = OpenComConfig (RecvCom, "", 9600, Parity, 7, 1, 512, 512);
+			
+			Err = OpenComConfig (SendCom, "", 9600, Parity, 8, 1, 512, 512);
+			Err = OpenComConfig (RecvCom, "", 9600, Parity, 8, 1, 512, 512);
+			
 			SetCtrlAttribute (panelHandle, PANEL_SENDSTRING, ATTR_DIMMED, 0);
 			SetCtrlAttribute (panelHandle, PANEL_Q4_numeric, ATTR_DIMMED, 0);
 			SetCtrlAttribute (panelHandle, PANEL_MODE_SELECT, ATTR_DIMMED, 0);
@@ -187,6 +190,27 @@ int N;
 	}
 	return 1;
 }
+
+/*********************************************************************/
+int CVICALLBACK RecTimer_2 (int panel, int control, int event,
+							void *callbackData, int eventData1, int eventData2)
+{
+	// We tried to use a callback function, but on our PC callback functions
+	// don't work for some reason. we tried running even the original
+	// unmodified version of this project but it just won't work, so we switched to a timer.
+	char RecBuff[100];
+	int N;
+	switch (event)
+	{
+		case EVENT_TIMER_TICK:
+			N = GetInQLen (RecvCom);
+			if (!N)  return(0);
+			RecvImageRx ();
+			break;
+	}
+	return 0;
+}
+
 /*********************************************************************/
 int CVICALLBACK RecMode (int panel, int control, int event,
 		void *callbackData, int eventData1, int eventData2)
@@ -197,6 +221,7 @@ int Mode;
 		case EVENT_VAL_CHANGED:
 			GetCtrlVal (panelHandle, PANEL_MODE_SELECT, &Mode);
 			SetCtrlAttribute (panelHandle, PANEL_TIMER, ATTR_ENABLED, !Mode); // if in polling mode then enable the timer
+			SetCtrlAttribute (panelHandle, PANEL_TIMER_2, ATTR_ENABLED, Mode == 2);
 			switch (Mode)
 			{
 				case 0: //polling
@@ -208,7 +233,7 @@ int Mode;
 					break;
 				
 				case 2: //Image
-					InstallComCallback (RecvCom, LWRS_RXFLAG, 0, 0, RecvImageRx, 0);
+					InstallComCallback (RecvCom, LWRS_RXFLAG, 0, 0, 0, 0);
 					break;
 			}
 			break;
@@ -271,15 +296,7 @@ int CVICALLBACK RxSelectFile (int panel, int control, int event,
 	return 0;
 }
 
-/*********************************************************************
-
-char **CreateBmpSendArray()
-{
-	char *arr[6] = 
-	return arr;
-}
-
-*********************************************************************/
+/*********************************************************************/
 
 int CVICALLBACK SendBmp (int panel, int control, int event,
 						  void *callbackData, int eventData1, int eventData2)
@@ -295,7 +312,7 @@ int CVICALLBACK SendBmp (int panel, int control, int event,
 			// To send data types that aren't char*, it's possible to use the following cast: (char *)(&x)
 			
 			// Create the array of messages to send
-			/*char *SendArray[] = {
+			char *SendArray[] = {
 				"ByteInRow",
 				(char *)(&ByteInRow),
 				"Pixel",
@@ -308,25 +325,25 @@ int CVICALLBACK SendBmp (int panel, int control, int event,
 				(char *)(BitSize),
 				};
 			
-			for (int i=0; i<10; i+=2)
+			for (int i=0; i<8; i+=2)
 			{
 				Len = strlen(SendArray[i]);
-				ComWrt (SendCom, SendArray[i], Len);
+				ComWrt (SendCom, SendArray[i], Len+1);
 				Delay(0.1);
 				Len = sizeof(int);
-				ComWrt (SendCom, SendArray[i+1], Len);
+				ComWrt (SendCom, SendArray[i], Len);
 				Delay(0.1);
 			}
 			Len = strlen("MyPicData");
-			ComWrt (SendCom, "MyPicData", Len);
-			Delay(0.1);
-			ComWrt (SendCom, (char *)(MyPicDataTx), BitSize);
-			break;*/
+			ComWrt (SendCom, "MyPicData", Len+1);
+			// Delay(0.1);
+			// ComWrt (SendCom, (char *)(MyPicDataTx), BitSize);
+			// break;
 			
 			ComWrt (SendCom, (char *)(mydata), sizeof(mydata));
 			Delay(0.1);
-			
-			
+			break;
+					
 	}
 	return 0;
 }

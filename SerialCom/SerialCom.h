@@ -24,6 +24,7 @@
 #define  PANEL_Parity_Toggle              9       /* control type: radioButton, callback function: (none) */
 #define  PANEL_MODE_SELECT                10      /* control type: ring, callback function: RecMode */
 #define  PANEL_TIMER                      11      /* control type: timer, callback function: RecTimer */
+#define  PANEL_TIMER_2                    12      /* control type: timer, callback function: RecTimer_2 */
 
 #define  PANEL_Rx                         2
 #define  PANEL_Rx_Rx_SelectPic            2       /* control type: command, callback function: RxSelectFile */
@@ -60,6 +61,7 @@ int  CVICALLBACK Config(int panel, int control, int event, void *callbackData, i
 int  CVICALLBACK QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK RecMode(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK RecTimer(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK RecTimer_2(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 void CVICALLBACK RxPanel(int menubar, int menuItem, void *callbackData, int panel);
 int  CVICALLBACK RxSelectFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SendBmp(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
