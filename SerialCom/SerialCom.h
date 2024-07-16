@@ -24,18 +24,6 @@
 #define  PANEL_Parity_Toggle              9       /* control type: radioButton, callback function: (none) */
 #define  PANEL_MODE_SELECT                10      /* control type: ring, callback function: RecMode */
 #define  PANEL_TIMER                      11      /* control type: timer, callback function: RecTimer */
-#define  PANEL_TIMER_2                    12      /* control type: timer, callback function: RecTimer_2 */
-
-#define  PANEL_Rx                         2
-#define  PANEL_Rx_Rx_SelectPic            2       /* control type: command, callback function: RxSelectFile */
-#define  PANEL_Rx_QUITBUTTON              3       /* control type: command, callback function: ClosePanelRx */
-#define  PANEL_Rx_CANVAS                  4       /* control type: canvas, callback function: (none) */
-#define  PANEL_Rx_LED                     5       /* control type: LED, callback function: (none) */
-
-#define  PANEL_Tx                         3
-#define  PANEL_Tx_QUITBUTTON              2       /* control type: command, callback function: ClosePanelTx */
-#define  PANEL_Tx_Tx_SelectPic            3       /* control type: command, callback function: TxSelectFile */
-#define  PANEL_Tx_SendButton              4       /* control type: command, callback function: SendBmp */
 
 
      /* Control Arrays: */
@@ -45,30 +33,17 @@
 
      /* Menu Bars, Menus, and Menu Items: */
 
-#define  MENUBAR                          1
-#define  MENUBAR_MENU1                    2
-#define  MENUBAR_MENU1_ITEM1              3
-#define  MENUBAR_MENU1_ITEM1_SUBMENU      4
-#define  MENUBAR_MENU1_ITEM1_ITEM2        5       /* callback function: RxPanel */
-#define  MENUBAR_MENU1_ITEM1_ITEM3        6       /* callback function: TxPanel */
+          /* (no menu bars in the resource file) */
 
 
      /* Callback Prototypes: */
 
-int  CVICALLBACK ClosePanelRx(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-int  CVICALLBACK ClosePanelTx(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK Config(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK RecMode(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK RecTimer(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-int  CVICALLBACK RecTimer_2(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-void CVICALLBACK RxPanel(int menubar, int menuItem, void *callbackData, int panel);
-int  CVICALLBACK RxSelectFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-int  CVICALLBACK SendBmp(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SendNumeric(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SendString(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-void CVICALLBACK TxPanel(int menubar, int menuItem, void *callbackData, int panel);
-int  CVICALLBACK TxSelectFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 
 
 #ifdef __cplusplus

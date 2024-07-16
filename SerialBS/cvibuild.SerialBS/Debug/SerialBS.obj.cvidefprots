@@ -1,0 +1,30 @@
+[MyPolling]
+Class="Function"
+Prototype="void MyPolling(int N);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialBS\SerialBS.c:16:6"
+
+[main]
+Class="Function"
+Prototype="int main(int argc, char *argv[]);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialBS\SerialBS.c:39:5"
+
+[QuitCallback]
+Class="Function"
+Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialBS\SerialBS.c:53:17"
+
+[SendIntArr]
+Class="Function"
+Prototype="int SendIntArr(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialBS\SerialBS.c:65:17"
+
+[Config]
+Class="Function"
+Prototype="int Config(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialBS\SerialBS.c:85:17"
+
+[RecTimer]
+Class="Function"
+Prototype="int RecTimer(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialBS\SerialBS.c:103:17"
+

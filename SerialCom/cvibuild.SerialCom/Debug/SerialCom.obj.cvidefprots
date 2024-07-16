@@ -1,90 +1,45 @@
 [MyCallback]
 Class="Function"
 Prototype="void MyCallback(int portNumber, int eventMask, void *callbackData);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:22:18"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:19:18"
 
 [MyPolling]
 Class="Function"
 Prototype="void MyPolling();"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:33:6"
-
-[RecvImageRx]
-Class="Function"
-Prototype="void RecvImageRx();"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:45:6"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:30:6"
 
 [main]
 Class="Function"
 Prototype="int main(int argc, char *argv[]);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:101:5"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:43:5"
 
 [QuitCallback]
 Class="Function"
 Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:120:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:58:17"
 
 [Config]
 Class="Function"
 Prototype="int Config(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:132:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:70:17"
 
 [SendString]
 Class="Function"
 Prototype="int SendString(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:161:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:96:17"
 
 [RecTimer]
 Class="Function"
 Prototype="int RecTimer(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:178:17"
-
-[RecTimer_2]
-Class="Function"
-Prototype="int RecTimer_2(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:195:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:113:17"
 
 [RecMode]
 Class="Function"
 Prototype="int RecMode(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:215:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:130:17"
 
 [SendNumeric]
 Class="Function"
 Prototype="int SendNumeric(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:245:17"
-
-[RxPanel]
-Class="Function"
-Prototype="void RxPanel(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:268:18"
-
-[TxPanel]
-Class="Function"
-Prototype="void TxPanel(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:276:18"
-
-[RxSelectFile]
-Class="Function"
-Prototype="int RxSelectFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:284:17"
-
-[SendBmp]
-Class="Function"
-Prototype="int SendBmp(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:301:17"
-
-[TxSelectFile]
-Class="Function"
-Prototype="int TxSelectFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:353:17"
-
-[ClosePanelTx]
-Class="Function"
-Prototype="int ClosePanelTx(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:372:17"
-
-[ClosePanelRx]
-Class="Function"
-Prototype="int ClosePanelRx(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:386:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\SerialCom\SerialCom.c:155:17"
 

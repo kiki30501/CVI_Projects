@@ -1,6 +1,6 @@
 [Workspace Header]
 Version = 2000
-Pathname = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.cws"
+Pathname = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialBS/SerialBS.cws"
 CVI Dir = "/c/program files (x86)/national instruments/cvi2020"
 CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
 CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2020"
@@ -11,7 +11,7 @@ VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
 VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
-Project 0001 = "SerialCom.prj"
+Project 0001 = "SerialBS.prj"
 Drag Bar Left = 160
 Window Top = 31
 Window Left = 245
@@ -46,29 +46,33 @@ Batch Build Release = False
 Batch Build Debug = False
 
 [File 0001]
-Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.uir"
+Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialBS/SerialBS.uir"
 File Type = "User Interface Resource"
-Disk Date = 3803908166
+Disk Date = 3803894160
 In Projects = "1,"
 Window Top = 33
-Window Left = 6
-Window Height = 349
-Window Width = 683
+Window Left = 10
+Window Height = 401
+Window Width = 770
 Window Z-Order = 2
 
 [File 0002]
-Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.c"
+Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialBS/SerialBS.c"
 File Type = "CSource"
-Disk Date = 3803908283
+Disk Date = 3803906305
 In Projects = "1,"
-Source Window State = "1,7,7,7,23,23,23,0,0,0,0,3,0,3,0,0,0,0,7,23,349,683,1,0,"
+Source Window State = "1,34,34,34,9,9,9,0,0,0,0,0,0,0,0,0,3,0,34,9,401,672,1,0,"
+Breakpoint 0001 = "24,0,enabled,"
+Tracepoint 0001 = "0,0,25,1,"
+Breakpoint 0002 = "31,0,enabled,"
+Tracepoint 0002 = "0,0,31,1,"
 Window Top = 95
-Window Left = 38
+Window Left = 42
 Window Z-Order = 1
 
 [Tab Order]
-Tab 0001 = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.uir"
-Tab 0002 = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.c"
+Tab 0001 = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialBS/SerialBS.uir"
+Tab 0002 = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialBS/SerialBS.c"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
