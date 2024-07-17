@@ -1,5 +1,6 @@
 /**************************************************************************/
 /* LabWindows/CVI User Interface Resource (UIR) Include File              */
+/* Copyright (c) National Instruments 2012. All Rights Reserved.          */
 /*                                                                        */
 /* WARNING: Do not add to, delete from, or otherwise modify the contents  */
 /*          of this include file.                                         */
@@ -18,12 +19,8 @@
 #define  PANEL_QUITBUTTON                 3       /* control type: command, callback function: QuitCallback */
 #define  PANEL_CONFIG                     4       /* control type: command, callback function: Config */
 #define  PANEL_RECIVER                    5       /* control type: textBox, callback function: (none) */
-#define  PANEL_Q4_numeric                 6       /* control type: numeric, callback function: SendNumeric */
-#define  PANEL_COM_Rx                     7       /* control type: numeric, callback function: (none) */
-#define  PANEL_COM_Tx                     8       /* control type: numeric, callback function: (none) */
-#define  PANEL_Parity_Toggle              9       /* control type: radioButton, callback function: (none) */
-#define  PANEL_MODE_SELECT                10      /* control type: ring, callback function: RecMode */
-#define  PANEL_TIMER                      11      /* control type: timer, callback function: RecTimer */
+#define  PANEL_BINARYSWITCH               6       /* control type: binary, callback function: RecMode */
+#define  PANEL_TIMER                      7       /* control type: timer, callback function: RecTimer */
 
 
      /* Control Arrays: */
@@ -42,7 +39,6 @@ int  CVICALLBACK Config(int panel, int control, int event, void *callbackData, i
 int  CVICALLBACK QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK RecMode(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK RecTimer(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-int  CVICALLBACK SendNumeric(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SendString(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 
 
