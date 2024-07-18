@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../lab8vaknin"
+		},
+		{
+			"path": "../SerialCom"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"daq_tester.h": "c"
+		}
+	}
+}

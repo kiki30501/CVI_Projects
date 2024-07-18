@@ -1,0 +1,1 @@
+-force-include-file "Daq_tester.c";"c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c" 
