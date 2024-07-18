@@ -39,6 +39,7 @@
 #define  PANEL_CONNECT                    24      /* control type: command, callback function: Connect_COM */
 #define  PANEL_TesterCOM                  25      /* control type: numeric, callback function: (none) */
 #define  PANEL_TEXT_2                     26      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TIMER                      27      /* control type: timer, callback function: (none) */
 
 
      /* Control Arrays: */

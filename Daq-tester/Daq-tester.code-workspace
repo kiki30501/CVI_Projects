@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../SerialCom"
+		},
+		{
+			"path": "../SerialBS"
 		}
 	],
 	"settings": {
