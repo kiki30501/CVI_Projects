@@ -1,45 +1,50 @@
-[make_range]
-Class="Function"
-Prototype="struct range make_range(double lower, double upper);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:16:7"
-
 [main]
 Class="Function"
 Prototype="int main(int argc, char *argv[]);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:37:5"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:40:5"
 
 [QuitCallback]
 Class="Function"
 Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:56:17"
-
-[MyCallback]
-Class="Function"
-Prototype="void MyCallback(int portNumber, int eventMask, void *callbackData);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:72:18"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:62:17"
 
 [Connect_COM]
 Class="Function"
 Prototype="int Connect_COM(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:79:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:77:17"
 
-[Digital_Leds]
+[format_12to16]
 Class="Function"
-Prototype="int Digital_Leds(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:96:17"
+Prototype="short format_12to16(short data);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:99:7"
 
-[Digital_Buttons]
+[tester_ADC]
 Class="Function"
-Prototype="int Digital_Buttons(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:110:17"
+Prototype="short tester_ADC(double sample);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:111:7"
 
-[Analog_Numerics]
+[button_values_to_char]
 Class="Function"
-Prototype="int Analog_Numerics(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:124:17"
+Prototype="char button_values_to_char();"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:124:6"
 
-[Analog_Knobs]
+[cmnd_digital_out]
 Class="Function"
-Prototype="int Analog_Knobs(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:138:17"
+Prototype="int cmnd_digital_out(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:141:17"
+
+[cmnd_analog_out]
+Class="Function"
+Prototype="int cmnd_analog_out(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:163:17"
+
+[my_refresh]
+Class="Function"
+Prototype="void my_refresh();"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:189:6"
+
+[refresh_timer]
+Class="Function"
+Prototype="int refresh_timer(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Daq-tester\Daq_tester.c:234:17"
 

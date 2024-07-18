@@ -27,11 +27,16 @@ HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activ
 	"c:\\Program Files (x86)\\National Instruments\\CVI2020\\bin"
 	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
 	;
+include Jamfile_instr ;
 LOCATE on "Daq_tester.c" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester" ;
 Object "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.obj" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\Daq_tester.c" ;
 FILENUM on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.obj" = 1 ;
 DEFPROTS on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.obj" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.obj.cvidefprots" ;
 OUTFILE on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.obj" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.obj.out" ;
 PrjObjects += "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.obj" ;
-Always $(PrjObjects) ;
-Depends all : $(PrjObjects) ;
+Object "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\resources.res" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\resources.in.rc" ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\resources.res" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\manifest.xml" ;
+MainFromObjects "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.exe" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\link_options.txt" ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.exe" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\resources.res" ;
+Depends all : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Daq-tester\\cvibuild.Daq_tester\\Debug\\Daq_tester.exe" ;
