@@ -1,6 +1,6 @@
 [Workspace Header]
 Version = 2000
-Pathname = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.cws"
+Pathname = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom2/SerialCom.cws"
 CVI Dir = "/c/program files (x86)/national instruments/cvi2020"
 CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
 CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2020"
@@ -46,9 +46,9 @@ Batch Build Release = False
 Batch Build Debug = False
 
 [File 0001]
-Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.uir"
+Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom2/SerialCom.uir"
 File Type = "User Interface Resource"
-Disk Date = 3803908166
+Disk Date = 3439023000
 In Projects = "1,"
 Window Top = 33
 Window Left = 6
@@ -57,18 +57,22 @@ Window Width = 683
 Window Z-Order = 2
 
 [File 0002]
-Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.c"
+Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom2/SerialCom.c"
 File Type = "CSource"
-Disk Date = 3803908283
+Disk Date = 3803893368
 In Projects = "1,"
-Source Window State = "1,7,7,7,23,23,23,0,0,0,0,3,0,3,0,0,0,0,7,23,349,683,1,0,"
+Source Window State = "1,31,31,31,4,4,4,0,0,0,0,3,0,3,0,0,19,0,31,4,349,683,1,0,"
+Breakpoint 0001 = "28,0,enabled,"
+Tracepoint 0001 = "0,0,29,1,"
+Breakpoint 0002 = "91,0,enabled,"
+Tracepoint 0002 = "0,0,92,1,"
 Window Top = 95
 Window Left = 38
 Window Z-Order = 1
 
 [Tab Order]
-Tab 0001 = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.uir"
-Tab 0002 = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom/SerialCom.c"
+Tab 0001 = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom2/SerialCom.uir"
+Tab 0002 = "/c/Users/sixsi/Code-Projects/CVI_Projects/SerialCom2/SerialCom.c"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
