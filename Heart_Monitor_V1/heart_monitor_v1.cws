@@ -95,9 +95,9 @@ Window Z-Order = 2
 [File 0005]
 Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.h"
 File Type = "Include"
-Disk Date = 3806608050
+Disk Date = 3806608448
 In Projects = "2,"
-Source Window State = "1,46,46,46,35,35,35,0,0,0,0,0,0,0,0,0,19,0,46,35,401,700,1,0,"
+Source Window State = "1,46,46,46,35,35,35,0,0,0,0,0,0,0,0,0,18,0,46,35,401,700,1,0,"
 Window Top = 33
 Window Left = 10
 Window Z-Order = 1
@@ -105,8 +105,8 @@ Window Z-Order = 1
 [Tab Order]
 Tab 0001 = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/heart_monitor_v1.uir"
 Tab 0002 = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/heart_monitor_v1.c"
-Tab 0003 = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.h"
-Tab 0004 = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.c"
+Tab 0003 = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.c"
+Tab 0004 = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.h"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
