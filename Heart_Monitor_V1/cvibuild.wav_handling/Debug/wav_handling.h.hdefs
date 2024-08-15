@@ -1,0 +1,8 @@
+
+
+
+
+[Define_Your_Functions_Here]
+Class="Function"
+Prototype="int Define_Your_Functions_Here(int x) __declspec(dllimport);"
+

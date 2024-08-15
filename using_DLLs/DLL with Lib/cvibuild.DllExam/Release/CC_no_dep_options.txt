@@ -1,0 +1,1 @@
+-force-include-file "MyDll.c";"c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\MyDll.c" -force-include-file "MyDll.h";"c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\MyDll.h" 

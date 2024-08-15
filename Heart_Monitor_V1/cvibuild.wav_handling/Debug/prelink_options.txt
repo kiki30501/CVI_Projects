@@ -1,0 +1,7 @@
+-inrc c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\resources.in.rc
+-outrc c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\resources.out.rc
+-inhdef c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\wav_handling.h.hdefs
+-outdef c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\wav_handling.dll.defs
+-indefprot c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\wav_handling.obj.cvidefprots
+-dllName wav_handling.dll
+-addNITypeInfo 

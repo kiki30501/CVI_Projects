@@ -1,0 +1,6 @@
+-inrc c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\cvibuild.DllExam\Release\resources.in.rc
+-outrc c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\cvibuild.DllExam\Release\resources.out.rc
+-inhdef c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\cvibuild.DllExam\Release\MyDll.h.hdefs
+-outdef c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\cvibuild.DllExam\Release\MyDll.dll.defs
+-indefprot c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\cvibuild.DllExam\Release\MyDll.obj.cvidefprots
+-dllName MyDll.dll

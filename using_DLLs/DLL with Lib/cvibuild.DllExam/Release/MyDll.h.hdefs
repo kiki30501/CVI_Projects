@@ -1,0 +1,7 @@
+[PrintLen]
+Class="Var"
+
+[DllPrint]
+Class="Function"
+Prototype="extern void DllPrint();"
+

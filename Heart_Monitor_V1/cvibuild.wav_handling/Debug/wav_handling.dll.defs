@@ -1,0 +1,4 @@
+LIBRARY wav_handling
+
+EXPORTS
+Define_Your_Functions_Here

@@ -1,0 +1,5 @@
+[DllPrint]
+Class="Function"
+Prototype="void DllPrint();"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\MyDll.c:4:6"
+

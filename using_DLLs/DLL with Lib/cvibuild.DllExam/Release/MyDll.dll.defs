@@ -1,0 +1,5 @@
+LIBRARY MyDll
+
+EXPORTS
+DllPrint
+PrintLen

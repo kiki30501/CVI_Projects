@@ -1,0 +1,15 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char *argv[]);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\Main.c:7:5"
+
+[QuitCallback]
+Class="Function"
+Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\Main.c:19:17"
+
+[MainPrint]
+Class="Function"
+Prototype="int MainPrint(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\using_DLLs\DLL with Lib\Main.c:34:17"
+

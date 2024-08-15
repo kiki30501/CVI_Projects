@@ -1,0 +1,55 @@
+CCFLAGS = -g ;
+HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2020\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "wav_handling.c" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1" ;
+LOCATE on "wav_handling.h" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1" ;
+Object "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.obj" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\wav_handling.c" ;
+FILENUM on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.obj" = 1 ;
+DEFPROTS on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.obj" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.obj" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.obj.out" ;
+PrjObjects += "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.obj" ;
+Object "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.h.hdefs" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\wav_handling.h" ;
+FILENUM on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.h.hdefs" = 2 ;
+OUTFILE on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.h.hdefs" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.h.hdefs.out" ;
+PreLinkInputs += "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\resources.in.rc" ;
+PreLinkInputs += $(PrjObjects) $(InstrObjects) ;
+PreLinkOutputs += "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\resources.out.rc" ;
+PreLinkOutputs += "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.dll.defs" ;
+PreLink $(PreLinkOutputs) : $(PreLinkInputs) ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.dll" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.dll.defs" ;
+Object "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\resources.res" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\resources.out.rc" ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\resources.res" : $(PreLinkOutputs) ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\resources.res" "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\resources.out.rc" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\resources.res" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\manifest.xml" ;
+MainFromObjects "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.dll" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.dll" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\link_options.txt" ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.dll" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\dependencies.lnk.in" ;
+Depends "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.dll" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\resources.res" ;
+Depends all : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.wav_handling\\Debug\\wav_handling.dll" ;
