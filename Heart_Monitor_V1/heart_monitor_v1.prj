@@ -10,7 +10,7 @@ IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
 VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
 IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
 VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
-Number of Files = 3
+Number of Files = 4
 Target Type = "Executable"
 Flags = 2064
 Copied From Locked InstrDrv Directory = False
@@ -19,14 +19,15 @@ Locked InstrDrv Name = ""
 Don't Display Deploy InstrDrv Dialog = False
 
 [Folders]
-Include Files Folder Not Added Yet = True
 Instrument Files Folder Not Added Yet = True
 Folder 0 = "User Interface Files"
 FolderEx 0 = "User Interface Files"
 Folder 1 = "Source Files"
 FolderEx 1 = "Source Files"
-Folder 2 = "Library Files"
-FolderEx 2 = "Library Files"
+Folder 2 = "Include Files"
+FolderEx 2 = "Include Files"
+Folder 3 = "Library Files"
+FolderEx 3 = "Library Files"
 
 [File 0001]
 File Type = "User Interface Resource"
@@ -54,8 +55,20 @@ Folder = "Source Files"
 Folder Id = 1
 
 [File 0003]
-File Type = "Library"
+File Type = "Include"
 Res Id = 3
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "wav_handling.h"
+Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+Folder Id = 2
+
+[File 0004]
+File Type = "Library"
+Res Id = 4
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "wav_handling.lib"
@@ -63,7 +76,7 @@ Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
-Folder Id = 2
+Folder Id = 3
 
 [Custom Build Configs]
 Num Custom Build Configs = 0

@@ -1,3 +1,5 @@
-sample data/*
+sample_data/*
 docs/*
 icons/*
+.vscode
+simple wav manipulator

@@ -41,7 +41,17 @@ END
 
 CVIDLLexports CVIDLLprototypes
 {
-   "int Define_Your_Functions_Here(int x) __declspec(dllexport);"
+   "int find_data_chunk(struct FILE *fp, struct wav_header header);"
+   "\n",
+   "void free_wav_data(struct wav_file wav);"
+   "\n",
+   "struct wav_file get_wav_from_file(struct FILE *fp, struct wav_header wav_head);"
+   "\n",
+   "struct wav_header get_wav_header_from_file(struct FILE *fp);"
+   "\n",
+   "int is_extended_RIFF(struct wav_header header);"
+   "\n",
+   "unsigned char *read_wav_data(struct FILE *fp, struct wav_header wav, unsigned char *data);"
    "\n",
    "\0"
 }

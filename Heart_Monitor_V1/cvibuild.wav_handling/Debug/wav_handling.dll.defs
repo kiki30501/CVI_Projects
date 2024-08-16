@@ -1,4 +1,9 @@
 LIBRARY wav_handling
 
 EXPORTS
-Define_Your_Functions_Here
+find_data_chunk
+is_extended_RIFF
+get_wav_from_file
+free_wav_data
+read_wav_data
+get_wav_header_from_file

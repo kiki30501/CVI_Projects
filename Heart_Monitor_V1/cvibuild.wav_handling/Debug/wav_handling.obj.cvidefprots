@@ -1,5 +1,30 @@
-[Define_Your_Functions_Here]
+[get_wav_header_from_file]
 Class="Function"
-Prototype="int Define_Your_Functions_Here(int x) __declspec(dllexport);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\wav_handling.c:4:15"
+Prototype="struct wav_header get_wav_header_from_file(struct FILE *fp);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\wav_handling.c:11:23"
+
+[read_wav_data]
+Class="Function"
+Prototype="unsigned char *read_wav_data(struct FILE *fp, struct wav_header wav, unsigned char *data);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\wav_handling.c:31:19"
+
+[free_wav_data]
+Class="Function"
+Prototype="void free_wav_data(struct wav_file wav);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\wav_handling.c:41:17"
+
+[get_wav_from_file]
+Class="Function"
+Prototype="struct wav_file get_wav_from_file(struct FILE *fp, struct wav_header wav_head);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\wav_handling.c:49:21"
+
+[is_extended_RIFF]
+Class="Function"
+Prototype="int is_extended_RIFF(struct wav_header header);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\wav_handling.c:60:6"
+
+[find_data_chunk]
+Class="Function"
+Prototype="int find_data_chunk(struct FILE *fp, struct wav_header header);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\wav_handling.c:68:5"
 

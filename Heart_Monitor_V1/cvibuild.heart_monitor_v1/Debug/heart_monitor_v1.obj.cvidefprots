@@ -1,55 +1,50 @@
 [main]
 Class="Function"
 Prototype="int main(int argc, char *argv[]);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:8:5"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:31:5"
 
 [QuitCallback]
 Class="Function"
 Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:20:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:59:17"
 
-[connect_monitor_com]
+[com_control]
 Class="Function"
-Prototype="int connect_monitor_com(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:32:17"
+Prototype="int com_control(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:73:17"
 
-[graph_run_stop]
+[timer_toggle]
 Class="Function"
-Prototype="int graph_run_stop(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:44:17"
+Prototype="int timer_toggle(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:120:17"
 
 [monitor_timer_func]
 Class="Function"
 Prototype="int monitor_timer_func(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:56:17"
-
-[emulator_com_control]
-Class="Function"
-Prototype="int emulator_com_control(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:69:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:138:17"
 
 [emulator_timer_func]
 Class="Function"
 Prototype="int emulator_timer_func(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:81:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:153:17"
 
 [emulator_file_open]
 Class="Function"
 Prototype="int emulator_file_open(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:93:17"
-
-[emul_run_stop]
-Class="Function"
-Prototype="int emul_run_stop(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:105:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:172:17"
 
 [open_tester_panel]
 Class="Function"
 Prototype="void open_tester_panel(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:117:18"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:199:18"
 
 [open_about_panel]
 Class="Function"
 Prototype="void open_about_panel(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:122:18"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:207:18"
+
+[quit_panel]
+Class="Function"
+Prototype="int quit_panel(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:215:17"
 

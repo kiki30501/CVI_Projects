@@ -2,7 +2,6 @@
 -out:c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\wav_handling.dll
 -def:c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\wav_handling.dll.defs
 -implib:c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\wav_handling.lib
--ignoreexports
 -dependenciesMapFile:c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\dependencies.lnk.in
 -embedSourceInfo
 -indefprot:c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\cvibuild.wav_handling\Debug\wav_handling.obj.cvidefprots

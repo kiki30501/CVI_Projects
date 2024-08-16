@@ -1,6 +1,7 @@
 heart_monitor_v1.obj
 cvi.lib
 cvistart.lib
+wav_handling.lib
 kernel32.lib
 user32.lib
 EXE Symbol Module

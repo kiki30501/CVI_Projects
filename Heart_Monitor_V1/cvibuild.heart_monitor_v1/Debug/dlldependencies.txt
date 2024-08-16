@@ -1,5 +1,7 @@
 cvi.lib
 cvirte.dll
+wav_handling.lib
+wav_handling.dll
 kernel32.lib
 KERNEL32.dll
 user32.lib

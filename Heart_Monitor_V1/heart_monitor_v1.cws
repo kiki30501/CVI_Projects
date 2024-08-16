@@ -58,7 +58,7 @@ Batch Build Debug = False
 [File 0001]
 Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/heart_monitor_v1.uir"
 File Type = "User Interface Resource"
-Disk Date = 3806596009
+Disk Date = 3806678662
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
@@ -69,38 +69,41 @@ Window Z-Order = 4
 [File 0002]
 Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/heart_monitor_v1.c"
 File Type = "CSource"
-Disk Date = 3806607583
+Disk Date = 3806687007
 In Projects = "1,"
-Source Window State = "1,18,18,18,0,0,0,0,0,0,0,0,0,0,0,0,16,0,18,0,401,602,1,0,"
-Window Top = 95
-Window Left = 42
-Window Z-Order = 3
-
-[File 0003]
-Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.lib"
-File Type = "Library"
-Disk Date = 3806606854
-In Projects = "1,"
-
-[File 0004]
-Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.c"
-File Type = "CSource"
-Disk Date = 3806607874
-In Projects = "2,"
-Source Window State = "1,8,8,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,401,700,1,0,"
-Window Top = 64
-Window Left = 26
-Window Z-Order = 2
-
-[File 0005]
-Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.h"
-File Type = "Include"
-Disk Date = 3806608448
-In Projects = "2,"
-Source Window State = "1,46,46,46,35,35,35,0,0,0,0,0,0,0,0,0,18,0,46,35,401,700,1,0,"
+Source Window State = "1,162,162,162,12,12,12,0,0,0,0,0,0,0,0,0,152,0,162,12,221,602,1,0,"
+Breakpoint 0001 = "162,0,enabled,"
+Tracepoint 0001 = "0,0,163,1,"
 Window Top = 33
 Window Left = 10
 Window Z-Order = 1
+
+[File 0003]
+Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.h"
+File Type = "Include"
+Disk Date = 3806686372
+In Projects = "1,2,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,400,600,1,0,"
+Window Top = 31
+Window Z-Order = 3
+
+[File 0004]
+Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.lib"
+File Type = "Library"
+Disk Date = 3806689606
+In Projects = "1,"
+
+[File 0005]
+Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.c"
+File Type = "CSource"
+Disk Date = 3806689598
+In Projects = "2,"
+Source Window State = "1,23,23,23,4,4,4,0,0,0,0,0,0,0,0,0,14,0,23,4,326,700,1,0,"
+Breakpoint 0001 = "22,0,enabled,"
+Tracepoint 0001 = "0,0,23,1,"
+Window Top = 126
+Window Left = 58
+Window Z-Order = 2
 
 [Tab Order]
 Tab 0001 = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/heart_monitor_v1.uir"

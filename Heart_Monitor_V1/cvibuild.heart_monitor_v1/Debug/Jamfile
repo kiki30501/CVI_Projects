@@ -29,6 +29,7 @@ HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activ
 	;
 include Jamfile_instr ;
 LOCATE on "heart_monitor_v1.c" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1" ;
+LOCATE on "wav_handling.h" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1" ;
 Object "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.heart_monitor_v1\\Debug\\heart_monitor_v1.obj" : "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\heart_monitor_v1.c" ;
 FILENUM on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.heart_monitor_v1\\Debug\\heart_monitor_v1.obj" = 1 ;
 DEFPROTS on "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.heart_monitor_v1\\Debug\\heart_monitor_v1.obj" = "c:\\Users\\sixsi\\Code-Projects\\CVI_Projects\\Heart_Monitor_V1\\cvibuild.heart_monitor_v1\\Debug\\heart_monitor_v1.obj.cvidefprots" ;

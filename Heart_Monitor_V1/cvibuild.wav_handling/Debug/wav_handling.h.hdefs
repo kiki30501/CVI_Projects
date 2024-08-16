@@ -2,7 +2,32 @@
 
 
 
-[Define_Your_Functions_Here]
+
+
+
+
+
+[get_wav_header_from_file]
 Class="Function"
-Prototype="int Define_Your_Functions_Here(int x) __declspec(dllimport);"
+Prototype="struct wav_header get_wav_header_from_file(struct FILE *fp);"
+
+[read_wav_data]
+Class="Function"
+Prototype="unsigned char *read_wav_data(struct FILE *fp, struct wav_header wav, unsigned char *data);"
+
+[free_wav_data]
+Class="Function"
+Prototype="void free_wav_data(struct wav_file wav);"
+
+[get_wav_from_file]
+Class="Function"
+Prototype="struct wav_file get_wav_from_file(struct FILE *fp, struct wav_header wav_head);"
+
+[is_extended_RIFF]
+Class="Function"
+Prototype="int is_extended_RIFF(struct wav_header header);"
+
+[find_data_chunk]
+Class="Function"
+Prototype="int find_data_chunk(struct FILE *fp, struct wav_header header);"
 
