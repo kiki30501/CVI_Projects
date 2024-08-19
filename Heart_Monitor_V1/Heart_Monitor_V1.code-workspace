@@ -5,6 +5,15 @@
 		},
 		{
 			"path": "../Daq-tester"
+		},
+		{
+			"path": "../MultiThreding"
+		},
+		{
+			"path": "../SerialBS"
+		},
+		{
+			"path": "../SerialCom-original"
 		}
 	],
 	"settings": {}
