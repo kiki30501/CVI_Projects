@@ -21,7 +21,7 @@ HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activ
 	"C:\\ProgramData\\National Instruments\\CVI\\include"
 	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\ansi"
 	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\clang\\3.3"
-	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"c:\\Program Files\\IVI Foundation\\IVI\\Include"
 	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
 	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
 	"c:\\Program Files (x86)\\National Instruments\\CVI2020\\bin"
