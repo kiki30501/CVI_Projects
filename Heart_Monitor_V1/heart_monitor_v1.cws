@@ -70,9 +70,9 @@ Window Z-Order = 2
 [File 0002]
 Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/heart_monitor_v1.c"
 File Type = "CSource"
-Disk Date = 3807807993
+Disk Date = 3807808533
 In Projects = "1,"
-Source Window State = "1,28,28,28,26,26,26,0,0,0,0,0,0,0,0,0,0,0,28,26,401,630,1,0,"
+Source Window State = "1,68,68,68,36,36,36,0,0,0,0,0,0,0,0,0,45,0,68,36,401,630,1,0,"
 Window Top = 312
 Window Left = 154
 Window Z-Order = 1

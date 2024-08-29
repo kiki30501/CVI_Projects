@@ -67,8 +67,6 @@ int main (int argc, char *argv[])
     
     
     DisplayPanel (panelHandle_main);
-    //DELETE THIS BEFORE SUBMITTING
-    DisplayPanel (panelHandle_emul);
     RunUserInterface ();
     
     
