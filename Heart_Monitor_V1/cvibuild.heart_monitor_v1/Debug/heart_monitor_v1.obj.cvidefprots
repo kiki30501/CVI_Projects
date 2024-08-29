@@ -1,50 +1,60 @@
 [main]
 Class="Function"
 Prototype="int main(int argc, char *argv[]);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:45:5"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:46:5"
 
 [QuitCallback]
 Class="Function"
 Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:85:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:88:17"
 
 [update_wf_gain]
 Class="Function"
 Prototype="int update_wf_gain(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:100:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:111:17"
 
 [com_control]
 Class="Function"
 Prototype="int com_control(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:114:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:124:17"
 
 [emulator_file_open]
 Class="Function"
 Prototype="int emulator_file_open(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:165:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:174:17"
 
 [open_tester_panel]
 Class="Function"
 Prototype="void open_tester_panel(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:218:18"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:238:18"
 
 [open_about_panel]
 Class="Function"
 Prototype="void open_about_panel(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:226:18"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:245:18"
 
 [quit_panel]
 Class="Function"
 Prototype="int quit_panel(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:234:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:252:17"
 
 [toggle_emulator]
 Class="Function"
 Prototype="int toggle_emulator(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:272:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:283:17"
+
+[samples_to_frequency]
+Class="Function"
+Prototype="double samples_to_frequency(int a, int b, int f);"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:346:8"
+
+[calculateHeartRate]
+Class="Function"
+Prototype="double calculateHeartRate();"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:354:8"
 
 [toggle_monitor]
 Class="Function"
 Prototype="int toggle_monitor(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:363:17"
+SourceLocation="c:\Users\sixsi\Code-Projects\CVI_Projects\Heart_Monitor_V1\heart_monitor_v1.c:438:17"
 

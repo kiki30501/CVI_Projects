@@ -30,18 +30,19 @@
 #define  PANEL_MAIN_NUMERIC_BPM           4       /* control type: numeric, callback function: (none) */
 #define  PANEL_MAIN_BTN_CONNECT_MONITOR   5       /* control type: command, callback function: com_control */
 #define  PANEL_MAIN_WF_GAIN               6       /* control type: numeric, callback function: update_wf_gain */
-#define  PANEL_MAIN_NUMERIC_COM_MONITOR   7       /* control type: numeric, callback function: (none) */
-#define  PANEL_MAIN_DECORATION_2          8       /* control type: deco, callback function: (none) */
-#define  PANEL_MAIN_DECORATION_3          9       /* control type: deco, callback function: (none) */
-#define  PANEL_MAIN_DECORATION            10      /* control type: deco, callback function: (none) */
-#define  PANEL_MAIN_TOGGLE_MAIN           11      /* control type: binary, callback function: toggle_monitor */
+#define  PANEL_MAIN_NUMERIC_THRESHOLD     7       /* control type: numeric, callback function: (none) */
+#define  PANEL_MAIN_NUMERIC_COM_MONITOR   8       /* control type: numeric, callback function: (none) */
+#define  PANEL_MAIN_DECORATION_2          9       /* control type: deco, callback function: (none) */
+#define  PANEL_MAIN_DECORATION_3          10      /* control type: deco, callback function: (none) */
+#define  PANEL_MAIN_DECORATION            11      /* control type: deco, callback function: (none) */
+#define  PANEL_MAIN_TOGGLE_MAIN           12      /* control type: binary, callback function: toggle_monitor */
 
 #define  PNL_ABOUT                        3
 #define  PNL_ABOUT_QUITBUTTON             2       /* control type: command, callback function: quit_panel */
 #define  PNL_ABOUT_TEXTBOX                3       /* control type: textBox, callback function: (none) */
 
      /* tab page panel controls */
-#define  TAB_BPM_GRAPH_BPM                2       /* control type: graph, callback function: (none) */
+#define  TAB_BPM_STRIPCHART               2       /* control type: strip, callback function: (none) */
 
      /* tab page panel controls */
 #define  TAB_MONITO_STRIPCHART            2       /* control type: strip, callback function: (none) */

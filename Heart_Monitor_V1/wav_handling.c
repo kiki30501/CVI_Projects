@@ -4,7 +4,7 @@
 
 /*=============================================================================================*/
 
-int data_offset = 0;
+static int data_offset = 0;
 
 /*=============================================================================================*/
 
@@ -60,7 +60,7 @@ wav_file DLLSTDCALL get_wav_from_file(FILE *fp, wav_header wav_head)
 BOOL is_extended_RIFF(wav_header header)
 {
     // Checks if the file is an EXTENDED RIFF file. meaning it has additional chunks.
-    return (header.subchunk2_id != "data");
+    return memcmp(header.subchunk2_id, "data", 4);
 }
 
 /*=============================================================================================*/
@@ -77,7 +77,7 @@ int find_data_chunk(FILE *fp, wav_header header)
         return header.subchunk2_size.int_value;
     else
     {
-        fseek(fp, HEADER_SIZE, SEEK_SET);
+        fseek(fp, 0, SEEK_SET);
         char chunk_id[4];
         int chunk_size;
         while (fread(chunk_id, 4, 1, fp) == 1)
@@ -85,7 +85,7 @@ int find_data_chunk(FILE *fp, wav_header header)
             fread(&chunk_size, 4, 1, fp);
             if (chunk_id == "data")
                 return ftell(fp);
-            fseek(fp, chunk_size, SEEK_CUR);
+            fseek(fp, header.block_align.short_value, SEEK_CUR);
         }
     }
     return -1; // could not find the data chunk

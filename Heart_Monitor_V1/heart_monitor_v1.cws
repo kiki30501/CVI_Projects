@@ -5,22 +5,20 @@ CVI Dir = "/c/program files (x86)/national instruments/cvi2020"
 CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
 CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2020"
 CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
-IVI Standard Root Dir = "/c/Program Files/IVI Foundation/IVI"
+IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
 IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
 VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
 VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
-Number of Projects = 3
+Number of Projects = 2
 Active Project = 1
 Project 0001 = "heart_monitor_v1.prj"
 Project 0001 Collapsed = True
 Project 0002 = "wav_handling.prj"
-Project 0003 = "/c/Users/sixsi/Code-Projects/CVI_Projects/Daq-tester/Daq_tester.prj"
-Project 0003 Collapsed = True
-Drag Bar Left = 291
+Drag Bar Left = 320
 Window Top = 31
 Window Left = 1
 Window Bottom = 745
-Window Right = 767
+Window Right = 1107
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -36,7 +34,7 @@ Break At First Statement = False
 Sort Type = "File Name"
 Number of Opened Files = 2
 Window Confinement Region Enabled = True
-MainColumnWidth = 274
+MainColumnWidth = 303
 FileDateColumnWidth = 70
 FileSizeColumnWidth = 70
 
@@ -58,19 +56,10 @@ Warn User If Debugging Release = 1
 Batch Build Release = False
 Batch Build Debug = False
 
-[Project Header 0003]
-Version = 2000
-Don't Update DistKit = False
-Platform Code = 4
-Build Configuration = "Debug"
-Warn User If Debugging Release = 1
-Batch Build Release = False
-Batch Build Debug = False
-
 [File 0001]
 Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/heart_monitor_v1.uir"
 File Type = "User Interface Resource"
-Disk Date = 3807698204
+Disk Date = 3807807909
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
@@ -81,48 +70,35 @@ Window Z-Order = 2
 [File 0002]
 Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/heart_monitor_v1.c"
 File Type = "CSource"
-Disk Date = 3807699127
+Disk Date = 3807807993
 In Projects = "1,"
-Source Window State = "1,44,44,44,14,14,14,0,0,0,0,0,0,0,0,0,33,0,44,14,401,630,1,0,"
-Window Top = 126
-Window Left = 58
+Source Window State = "1,28,28,28,26,26,26,0,0,0,0,0,0,0,0,0,0,0,28,26,401,630,1,0,"
+Window Top = 312
+Window Left = 154
 Window Z-Order = 1
 
 [File 0003]
 Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.h"
 File Type = "Include"
-Disk Date = 3807682028
+Disk Date = 3806686372
 In Projects = "1,2,"
-Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,400,600,1,0,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,400,600,1,0,"
 Window Top = 31
 
 [File 0004]
 Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.lib"
 File Type = "Library"
-Disk Date = 3807682028
+Disk Date = 3807784766
 In Projects = "1,"
 
 [File 0005]
 Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/wav_handling.c"
 File Type = "CSource"
-Disk Date = 3807682028
+Disk Date = 3807784762
 In Projects = "2,"
-Source Window State = "1,21,21,21,8,8,8,0,0,0,0,0,0,0,0,0,0,0,21,8,326,700,1,0,"
+Source Window State = "1,62,62,62,11,11,11,0,0,0,0,0,0,0,0,0,31,0,62,11,326,700,1,0,"
 Window Top = 126
 Window Left = 58
-
-[File 0006]
-Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Daq-tester/Daq_tester.uir"
-File Type = "User Interface Resource"
-Disk Date = 3807682028
-In Projects = "3,"
-
-[File 0007]
-Path = "/c/Users/sixsi/Code-Projects/CVI_Projects/Daq-tester/Daq_tester.c"
-File Type = "CSource"
-Disk Date = 3807682028
-In Projects = "3,"
-Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [Tab Order]
 Tab 0001 = "/c/Users/sixsi/Code-Projects/CVI_Projects/Heart_Monitor_V1/heart_monitor_v1.uir"
@@ -300,94 +276,6 @@ Always show confirmation dialog = True
 External Process Path = ""
 
 [Command Line Args 0002]
-Command Line Args = ""
-Working Directory = ""
-Environment Options = ""
-
-[Default Build Config 0003 Debug]
-Generate Browse Info = True
-Enable Uninitialized Locals Runtime Warning = True
-Batch Build = False
-Profile = "Disabled"
-Debugging Level = "Standard"
-Execution Trace = "Disabled"
-Command Line Args = ""
-Working Directory = ""
-Environment Options = ""
-External Process Path = ""
-
-[Default Build Config 0003 Release]
-Generate Browse Info = True
-Enable Uninitialized Locals Runtime Warning = True
-Batch Build = False
-Profile = "Disabled"
-Debugging Level = "Standard"
-Execution Trace = "Disabled"
-Command Line Args = ""
-Working Directory = ""
-Environment Options = ""
-External Process Path = ""
-
-[Default Build Config 0003 Debug64]
-Generate Browse Info = True
-Enable Uninitialized Locals Runtime Warning = True
-Batch Build = False
-Profile = "Disabled"
-Debugging Level = "Standard"
-Execution Trace = "Disabled"
-Command Line Args = ""
-Working Directory = ""
-Environment Options = ""
-External Process Path = ""
-
-[Default Build Config 0003 Release64]
-Generate Browse Info = True
-Enable Uninitialized Locals Runtime Warning = True
-Batch Build = False
-Profile = "Disabled"
-Debugging Level = "Standard"
-Execution Trace = "Disabled"
-Command Line Args = ""
-Working Directory = ""
-Environment Options = ""
-External Process Path = ""
-
-[Build Dependencies 0003]
-Number of Dependencies = 0
-
-[Build Options 0003]
-Generate Browse Info = True
-Enable Uninitialized Locals Runtime Warning = True
-Execution Trace = "Disabled"
-Profile = "Disabled"
-Debugging Level = "Standard"
-Break On Library Errors = True
-Break On First Chance Exceptions = False
-
-[Execution Target 0003]
-Execution Target Address = "Local desktop computer"
-Execution Target Port = 0
-Execution Target Type = 0
-
-[SCC Options 0003]
-Use global settings = True
-SCC Provider = ""
-SCC Project = ""
-Local Path = ""
-Auxiliary Path = ""
-Perform Same Action For .h File As For .uir File = "Ask"
-Perform Same Action For .cds File As For .prj File = "Ask"
-Username = ""
-Comment = ""
-Use Default Username = False
-Use Default Comment = False
-Suppress CVI Error Messages = False
-Always show confirmation dialog = True
-
-[DLL Debugging Support 0003]
-External Process Path = ""
-
-[Command Line Args 0003]
 Command Line Args = ""
 Working Directory = ""
 Environment Options = ""
